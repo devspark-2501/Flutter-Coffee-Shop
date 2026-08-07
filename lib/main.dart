@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart'; // ✅ ADD THIS
+import 'pages/home_page.dart'; // import location
 
 void main() {
   runApp(AppCode());
