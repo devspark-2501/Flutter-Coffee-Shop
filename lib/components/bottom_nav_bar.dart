@@ -8,7 +8,7 @@ class MyBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GNav(
-      tabs: const [   // 👈 add const (optional but better)
+      tabs: const [   // add const (optional but better)
         GButton(
           icon: Icons.home,
           text: "Shop",
