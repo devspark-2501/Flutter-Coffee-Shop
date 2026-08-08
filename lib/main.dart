@@ -1,8 +1,10 @@
+import 'package:coffee_shop_project/models/coffee_shop.dart';
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart'; // import location
+import 'package:provider/provider.dart';
+import 'pages/home_page.dart';
 
 void main() {
-  runApp(AppCode());
+  runApp(const AppCode());
 }
 
 class AppCode extends StatelessWidget {
@@ -10,9 +12,12 @@ class AppCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
+    return ChangeNotifierProvider(
+      create: (context) => CoffeeShop(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomePage(),
+      ),
     );
   }
 }
