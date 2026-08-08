@@ -1,0 +1,46 @@
+import 'package:coffee_shop_project/models/coffee.dart';
+import 'package:flutter/material.dart';
+
+class CoffeeShop {
+  final List<Coffee> _shop = [
+
+    Coffee(
+      name: 'Long Black',
+      price: "4.10",
+      imagePath: "lib/images/black.png"
+    ),
+
+    Coffee(
+        name: "Latte",
+        price: "4.20",
+        imagePath: "lib/images/latte.png"
+    ),
+
+    Coffee(
+        name: "Espresso", 
+        price: "3.50", 
+        imagePath: "lib/images/iced"
+    ),
+    
+    Coffee(
+        name: "Cold Coffee",
+        price: "4.40",
+        imagePath: "lib/images/cold_coffee"
+    )
+  ];
+
+  List<Coffee> _userCart = [];
+
+  List<Coffee> get coffeeShop => _shop;
+
+  List<Coffee> get userCart => _userCart;
+
+  void AddItemToCart(Coffee coffee) {
+    _userCart.add(coffee);
+  }
+
+  void RemoveItemFromCart(Coffee coffee) {
+    _userCart.remove(coffee);
+  }
+
+}
