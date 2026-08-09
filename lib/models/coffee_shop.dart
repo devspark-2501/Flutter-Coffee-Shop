@@ -37,10 +37,12 @@ class CoffeeShop extends ChangeNotifier{
 
   void AddItemToCart(Coffee coffee) {
     _userCart.add(coffee);
+    notifyListeners();
   }
 
   void RemoveItemFromCart(Coffee coffee) {
     _userCart.remove(coffee);
+    notifyListeners();
   }
 
 }
