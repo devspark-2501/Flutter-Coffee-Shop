@@ -18,6 +18,7 @@ class _ShopPageState extends State<ShopPage> {
         .addItemToCart(coffee);
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Consumer<CoffeeShop>(
